@@ -8,7 +8,7 @@ public class MostrarNumeroMaior {
             if (primeiroNumero > segundoNumero) {
                 System.out.println("O primeiro número(" + primeiroNumero + ") é maior que o segundo(" + segundoNumero + ").");
             } else {
-                System.out.println("O segundo número(" + segundoNumero + ") é maior que o primeiro número(" + segundoNumero + ").");
+                System.out.println("O segundo número(" + segundoNumero + ") é maior que o primeiro número(" + primeiroNumero + ").");
             }
 
     }

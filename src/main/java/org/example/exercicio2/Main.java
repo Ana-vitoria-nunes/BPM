@@ -8,12 +8,17 @@ public class Main {
         Scanner scanner=new Scanner(System.in);
         NumeroNegativoOuPositivo numeroNegativoOuPositivo=new NumeroNegativoOuPositivo();
 
-        try {
-            System.out.println("Informe um número: ");
-            int numero=scanner.nextInt();
-            numeroNegativoOuPositivo.retornarNumeroPositivoOuNegativo(numero);
-        }catch (InputMismatchException e){
-            System.out.println("Informe apenas número inteiro");
-        }
+        boolean entrada=false;
+        do {
+            try {
+                System.out.println("Informe um número: ");
+                int numero = scanner.nextInt();
+                numeroNegativoOuPositivo.retornarNumeroPositivoOuNegativo(numero);
+                entrada=true;
+            } catch (InputMismatchException e) {
+                System.out.println("Informe apenas número inteiro");
+                scanner.nextLine();
+            }
+        }while (!entrada);
     }
 }
